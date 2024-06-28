@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Awareness App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><b>Mental Health Awareness App</b></h1>
+        <nav>
+            <a href="#disorders">Disorders</a>
+            <a href="#assessment">Self-Assessment</a>
+            <a href="#resources">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="disorders">
+            <h2>Mental Health Disorders</h2>
+            <div id="disorder-list"></div>
+        </section>
+
+        <section id="assessment">
+            <h2>Self-Assessment</h2>
+            <form id="assessment-form">
+                <label for="symptom">Enter a symptom:</label>
+                <input type="text" id="symptom" required>
+                <button type="submit"><b>Assess</b></button>
+            </form>
+            <div id="assessment-result"></div>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <ul id="resource-list">
+                <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
+                <li><a href="https://www.nimh.nih.gov/" target="_blank">National Institute of Mental Health</a></li>
+                <li><a href="https://www.who.int/mental_health/en/" target="_blank">WHO Mental Health</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
