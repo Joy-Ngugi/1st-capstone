@@ -11,6 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
             symptoms: ["Excessive worry", "Restlessness", "Difficulty concentrating"],
             description: "A mental health disorder characterized by feelings of worry, anxiety, or fear that are strong enough to interfere with one's daily activities."
         },
+        {
+            name: "bipolar disorder",
+            symptoms: ["Increased energy", "restlessness", 'Extreme irritability', 'Poor concentration', 'fast talking', 'sleeplessness', 'Heightened sense of self-importance', 'Increased sexual behavior', 'Abuse of drugs', 'intrusive or aggressive behavior', 'feeling of Sadness', 'anxiety', 'hopelessness and guilt',
+                     'Loss of interest','or pleasure in activities once enjoyed', 'Decreased energy', 'fatigue'],
+            description: "Bipolar disorder is a serious mental illness that causes unusual shifts in mood, ranging from extreme highs (mania or “manic” episodes) to lows (depression or “depressive” episode). A person who has bipolar disorder also experiences changes in their energy, thinking, behavior, and sleep"       
+
+           
+        },
+        {
+            name: "bipolar disorder",
+            symptoms: ["Increased energy", "restlessness", 'Extreme irritability', 'Poor concentration', 'fast talking', 'sleeplessness', 'Heightened sense of self-importance', 'Increased sexual behavior', 'Abuse of drugs', 'intrusive or aggressive behavior', 'feeling of Sadness', 'anxiety', 'hopelessness and guilt',
+                     'Loss of interest','or pleasure in activities once enjoyed', 'Decreased energy', 'fatigue'],
+            description: "Bipolar disorder is a serious mental illness that causes unusual shifts in mood, ranging from extreme highs (mania or “manic” episodes) to lows (depression or “depressive” episode). A person who has bipolar disorder also experiences changes in their energy, thinking, behavior, and sleep"       
+
+           
+        }
         // Add more disorders as needed
     ];
 
@@ -53,4 +69,42 @@ document.addEventListener('DOMContentLoaded', function() {
             assessmentResult.textContent = "No matching disorders found. Please consult a healthcare professional for a proper diagnosis.";
         }
     });
+
+    // Tracking form submission
+    const trackingForm = document.getElementById('tracking-form');
+    const trackingResult = document.getElementById('tracking-result');
+
+    trackingForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const sleep = document.getElementById('sleep').value;
+        const stress = document.getElementById('stress').value;
+        const mood = document.getElementById('mood').value;
+
+        const today = new Date().toLocaleDateString();
+
+        let trackingData = JSON.parse(localStorage.getItem('trackingData')) || [];
+        trackingData.push({ date: today, sleep, stress, mood });
+        localStorage.setItem('trackingData', JSON.stringify(trackingData));
+
+        displayTrackingData(trackingData);
+    });
+
+    function displayTrackingData(data) {
+        trackingResult.innerHTML = "<h3>Tracking Data</h3>";
+        data.forEach(entry => {
+            const entryElement = document.createElement('div');
+            entryElement.className = 'tracking-entry';
+            entryElement.innerHTML = `
+                <p>Date: ${entry.date}</p>
+                <p>Sleep: ${entry.sleep} hours</p>
+                <p>Stress: ${entry.stress}/10</p>
+                <p>Mood: ${entry.mood}/10</p>
+            `;
+            trackingResult.appendChild(entryElement);
+        });
+    }
+
+    // Display existing tracking data on load
+    const existingTrackingData = JSON.parse(localStorage.getItem('trackingData')) || [];
+    displayTrackingData(existingTrackingData);
 });
