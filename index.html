@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Awareness App</title>
+    <title>Mental Health Awareness </title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #icon{
+            height:70px;
+            width:70px;
+        }
+        .container{
+            margin-top:5%;
+        }
+        h3{
+            margin-top:3%;
+        }
+        #tag{
+            text-align: center;
+            font-family: Times New Roman;
+            font-size: 80px;
+            margin:2%;
+        }
+        span{
+            color:orange;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Mental Health Awareness App</h1>
+        <h1>Mental Health Awareness </h1>
         <nav>
             <a href="#disorders">Disorders</a>
             <a href="#assessment">Self-Assessment</a>
@@ -16,19 +37,49 @@
             <a href="#resources">Resources</a>
         </nav>
     </header>
-
+        <div class="images">
+            <img id="img" src="mental health disorders.jpg" >
+            <img id="img1" src="world_mental_health_day_2022.jpeg">
+            <img id="img2" src="mental-health-empowerment-removebg-preview.png">
+        </div>
+        <p id="tag">Empowering<span> Minds</span></p>
     <main>
         <section id="disorders">
             <h2>Mental Health Disorders</h2>
+         <div class="container">
+            <a href="depression.html"><img class="frame" src=depression.jpg alt="depression" target="-blank"></a>
+            <a id= "link" href="depression.html">Depression</a>
+            <a href="bipolar.html"><img class="frame" src=bipolar.png alt="bipolar disorder"></a>
+            <a id= "link"href="bipolar.html">Bipolar/ Maniac Disorder</a>
+            <a href="ptsd.html"><img class="frame" src=PTSD.png alt="PTSD"></a>
+            <a id= "link"href="PTSD.html">PTSD</a>
+            <a href="anxiety.html"><img class="frame" src=anxiety.jpg alt="anxiety"></a>
+            <a id= "link"href="anxiety.html">Anxiety</a>
+        </div>
+        <div class="container">
+            <a id= "link"href="stress.html">stress</a>
+            <a href="stress.html"><img class="frame" src=stress.png alt="stress"></a>
+            <a id= "link"href="schizophrenia.html">Schizophrenia</a>
+            <a href="schizophrenia.html"><img class="frame" src=schizophrenia.PNG alt="schizophrenia"></a>
+            <a id= "link"href="Eating.html">Eating Disorders</a>
+            <a href="eating.html"><img class="frame" src=eatingd.PNG alt="eating"></a>
+            <a id= "link"href="OCD.html">Obsessive compulsive<br>disorder</a>
+            <a href="OCD.html"><img class="frame" src=OCD.PNG alt="OCD"></a>
+         </div>
             <div id="disorder-list"></div>
         </section>
 
-        <section id="assessment">
+       <section id="assessment">
             <h2>Self-Assessment</h2>
             <form id="assessment-form">
                 <label for="symptom">Enter a symptom:</label>
                 <input type="text" id="symptom" required>
-                <button type="submit">Assess</button>
+                <button type="submit" onclick="navigate()">Assess</button>
+                <script>
+                    function navigate(){
+                        window.location.href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders/?gad_source=1&gclid=CjwKCAjwyo60BhBiEiwAHmVLJTWYJOmV9PiPVEQGkxWYpiRDfi1LZb25mZHUgwCzLBmvOe_b8xuFAxoC2bQQAvD_BwE"
+                    }
+                </script>
             </form>
             <div id="assessment-result"></div>
         </section>
@@ -59,6 +110,17 @@
             </ul>
         </section>
     </main>
+  <footer>
+    <h3>Contact us:</h3>
+    <div class="container">
+    <img id="icon" src="facebook-color-icon-2048x2048-bfly1vxr.png">
+    <h4>@MentalAwarenessKenya</h4>
+    <img id="icon" src="free-phone-icon-1-thumb.png">
+    <h4>+2547002003004</h4>
+    <img  id="icon" src="Vector-Instagram-icon-PNG-removebg-preview.png">
+    <h4>@MentalAwarenessKenya</h4>
+    </div>
+  </footer>
 
     <script src="style.js"></script>
 </body>
