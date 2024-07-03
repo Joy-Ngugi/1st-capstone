@@ -74,11 +74,16 @@
             <form id="assessment-form">
                 <label for="symptom">Enter a symptom:</label>
                 <input type="text" id="symptom" required>
-                <button type="submit" onclick="navigate()">Assess</button>
+                <button type="submit" onclick="navigate()"><b>Assess</b></button>
                 <script>
-                    function navigate(){
-                        window.location.href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders/?gad_source=1&gclid=CjwKCAjwyo60BhBiEiwAHmVLJTWYJOmV9PiPVEQGkxWYpiRDfi1LZb25mZHUgwCzLBmvOe_b8xuFAxoC2bQQAvD_BwE"
-                    }
+                    function navigate() {
+            var form = document.getElementById('assessment-form');
+            if (form.checkValidity()) {
+                window.location.href = "https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response/?gad_source=1&gclid=Cj0KCQjw7ZO0BhDYARIsAFttkCgRQG9cxJzpGBchRLM6-XzaX3CIpKoGhwVbM2XJgJlsd5QxEYvRYecaAsKhEALw_wcB";
+            } else {
+                alert("Please fill out all required fields.");
+            }
+        }
                 </script>
             </form>
             <div id="assessment-result"></div>
@@ -96,18 +101,24 @@
                 <label for="mood">Mood (1-10):</label>
                 <input type="number" id="mood" min="1" max="10" required>
                 
-                <button type="submit">Track</button>
+                <button type="submit"><b>Track</b></button>
             </form>
             <div id="tracking-result"></div>
         </section>
 
         <section id="resources">
             <h2>Resources</h2>
+            
             <ul id="resource-list">
-                <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
-                <li><a href="https://www.nimh.nih.gov/" target="_blank">National Institute of Mental Health</a></li>
-                <li><a href="https://www.who.int/mental_health/en/" target="_blank">WHO Mental Health</a></li>
+              
+                <img id="org" src="MHG.jpeg">
+                <li><a href="https://www.mentalhealth.gov/" target="_blank" class="R">MentalHealth.gov</a></li>
+                <img id="org1"src="NIMH.jpg">
+                <li><a href="https://www.nimh.nih.gov/" target="_blank" class="R">National Institute of Mental Health</a></li>
+                <img  id="org2" src="WHO.jpg">
+                <li><a href="https://www.who.int/mental_health/en/" class=" R"target="_blank">WHO Mental Health</a></li>
             </ul>
+            
         </section>
     </main>
   <footer>

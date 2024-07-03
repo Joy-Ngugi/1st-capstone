@@ -108,3 +108,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const existingTrackingData = JSON.parse(localStorage.getItem('trackingData')) || [];
     displayTrackingData(existingTrackingData);
 });
+
