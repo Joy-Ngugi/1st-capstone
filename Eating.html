@@ -14,15 +14,45 @@
             font-family: 'Times New Roman', Times, serif;
         }
         body{
-            font-size: 20px;
+            font-size: 18px;
             margin:40px;
             font-family: 'Times New Roman', Times, serif;
+        }
+        h2{
+            color:orange;
+        }
+        #homeButton {
+            margin-top: 5px;
+            margin-left: 20px;
+            padding: 12px 24px; 
+            font-size: 1rem; 
+            color: white; 
+            background-color: #4CAF50; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        }
+
+        
+        #homeButton:hover {
+            background-color: #4CAF50; 
+            transform: scale(1.05); 
+        }
+
+        
+        #homeButton:focus {
+            outline: 2px solid #4CAF50; 
+        }
+
+        #homeButton:active {
+            transform: scale(0.95); 
         }
     </style>
 </head>
 <body>
     <h1>Eating Disorders</h1>
-    <p>Eating disorders are actually serious and often fatal illnesses that are associated with severe disturbances in people's eating behaviors and related thoughts and emotions. Preoccupation with food, body weight, and shape may also signal an eating disorder.</p>
+    <p>Eating disorders involve serious disturbances in eating behaviors and related thoughts and emotions. Common types include anorexia nervosa, bulimia nervosa, and binge-eating disorder. These conditions can cause physical complications and psychological distress.</p>
     <h2>Types of Eating Disorders</h2>
     <h3>1.Anorexia Nervosa</h3>
     <P>Anorexia nervosa is a condition where people avoid food, severely restrict food, or eat very small quantities of only certain foods. They also may weigh themselves repeatedly. Even when dangerously underweight, they may see themselves as overweight.</P>
@@ -71,5 +101,15 @@
         <li>Trouble concentrating</li>
         <li>Slow heart rate</li>
     </ul>
+    <div>
+        <h2>Treatment and Remedies</h2>
+        <ul>
+            <li>Therapy: Cognitive-behavioral therapy (CBT) and family-based therapy (FBT).</li>
+            <li>Medical Care: Nutritional counseling, medical monitoring, and medication (e.g., SSRIs for co-occurring anxiety).</li>
+            <li>Support Networks: Group therapy and community support for long-term recovery.</li>
+        </ul>
+    </div>
+    <button id="homeButton" >↩ Back to Home Page</button>
 </body>
+<script src="script.js"></script>
 </html>
